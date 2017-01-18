@@ -1,7 +1,10 @@
-package eg2;
+package cacheBlock;
 
+import org.apache.commons.io.FileUtils;
 import org.jboss.netty.bootstrap.ServerBootstrap;
-import org.jboss.netty.channel.*;
+import org.jboss.netty.channel.ChannelPipeline;
+import org.jboss.netty.channel.ChannelPipelineFactory;
+import org.jboss.netty.channel.Channels;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
 import org.jboss.netty.handler.codec.serialization.ClassResolvers;
 import org.jboss.netty.handler.codec.serialization.ObjectDecoder;
@@ -10,10 +13,7 @@ import org.jboss.netty.handler.codec.serialization.ObjectEncoder;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.util.TreeMap;
 import java.util.concurrent.Executors;
-
-import org.apache.commons.io.FileUtils;
 
 /**
  * Created by xiaoyue26 on 11/23/16.
@@ -45,33 +45,7 @@ public class HelloServer {
     }
 
     public static void main(String args[]) {
-        try {
-            int[] a =new int[1];
-            a[2]=2;
-
-        }catch (Exception e ){
-            System.out.print("---"+e.toString()+"--");
-
-        }
-        String []ssdDirs={"a","b"};
-        String []localDirs={"c","d","e"};
-        String[] allDirs=new String[ssdDirs.length+localDirs.length];
-        System.arraycopy(ssdDirs, 0, allDirs, 0, ssdDirs.length);
-        System.arraycopy(localDirs, 0, allDirs, ssdDirs.length, localDirs.length);
-        for(String a:allDirs){
-            System.out.println(a);
-        }
-
         HelloServer server = new HelloServer();
-        try {
-            File log = new File("/home/xiaoyue26/hello");
-            String data = FileUtils.readFileToString(log);
-            data += "log\n";
-            FileUtils.write(log, data);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         server.run();
     }
 }

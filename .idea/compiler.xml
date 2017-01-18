@@ -22,11 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="netty-demo" />
+        <module name="wordcount" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="netty-demo" target="1.6" />
+      <module name="wordcount" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

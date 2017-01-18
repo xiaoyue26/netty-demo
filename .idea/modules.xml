@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/netty-demo.iml" filepath="$PROJECT_DIR$/netty-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wordcount/wordcount.iml" filepath="$PROJECT_DIR$/wordcount/wordcount.iml" />
     </modules>
   </component>
 </project>

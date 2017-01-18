@@ -39,7 +39,7 @@ public class HelloClient {
         });
 
         // 连接到本地的8000端口的服务端
-        bootstrap.connect(new InetSocketAddress("127.0.0.1", 8000));
+        bootstrap.connect(new InetSocketAddress(8000));
 
         System.out.println("line 1");
         debugClient.check("line 1");
